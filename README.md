@@ -1,0 +1,198 @@
+# Maven Toys Sales Analysis
+
+## Project Overview
+
+This project is an end-to-end sales analysis of Maven Toys, a fictional retail toy store chain.  
+The goal was to clean and validate raw sales, product, store and inventory data, build a reliable data model, and create an interactive Power BI dashboard for business performance analysis.
+
+The final dashboard allows users to analyze revenue, profit, product performance, store performance, inventory levels and trends over time.
+
+---
+
+## Business Objectives
+
+The dashboard was designed to answer the following business questions:
+
+- How has profit changed over time?
+- Which product categories generate the highest profit?
+- Which products are the most profitable?
+- Which stores generate the highest profit?
+- How does a selected product perform across stores?
+- What is the current stock level for selected products?
+
+---
+
+## Dataset
+
+The dataset consists of four main tables:
+
+| Table | Description |
+|---|---|
+| Sales | Transaction-level sales data |
+| Products | Product details, categories, costs and prices |
+| Stores | Store names, locations and when they were opened |
+| Inventory | Current stock levels by store and product |
+
+Sales table contains over 800 000 rows.
+
+---
+
+## Tools Used
+
+- SQL Server Management Studio
+- Microsoft SQL Server
+- T-SQL
+- Power BI
+- DAX
+- VS Code
+- GitHub
+
+---
+
+## Project Workflow
+
+1. Data Understanding
+2. Data Quality Checks
+3. Business Validation
+4. Data Issues Identification
+5. Data Cleaning with SQL Views
+6. Power BI Data Model
+7. Dashboard Development
+
+---
+
+## Data Cleaning
+
+Raw tables were not modified directly.  
+Instead, cleaned SQL views were created and used as the source for Power BI.
+
+Main transformations included:
+
+- Converting `Sales.Units` from `NVARCHAR` to `INT`
+- Converting `Inventory.Stock_On_Hand` from `NVARCHAR` to `INT`
+- Removing `$` from product cost and price fields
+- Converting product cost and price to `DECIMAL(10,2)`
+
+Created SQL views:
+
+- `vw_sales_clean`
+- `vw_products_clean`
+- `vw_inventory_clean`
+- `vw_stores_clean`
+
+---
+
+## Data Model
+
+The Power BI model uses a star-schema style structure.
+
+Fact tables:
+
+- Sales
+- Inventory
+
+Dimension tables:
+
+- Products
+- Stores
+- Calendar
+
+All relationships use single-direction filtering.
+
+---
+
+## Dashboard Pages
+
+### Executive Summary
+
+This page provides a high-level overview of business performance.
+
+Main elements:
+
+- Total Revenue
+- Total Profit
+- Profit Margin
+- Units Sold
+- Total Transactions
+- Monthly Profit Trend
+- Profit by Category
+- Top 5 Products by Profit
+- Top 5 Stores by Profit
+
+![Executive Summary](../)
+
+---
+
+### Product Details
+
+This page is accessed through drill-through from the Executive Summary page.  
+It provides detailed analysis for a selected product.
+
+Main elements:
+
+- Product-specific revenue and profit
+- Profit margin
+- Units sold
+- Current stock
+- Stores selling the selected product
+- Monthly profit trend
+- Top stores for selected product
+
+![Product Details](documentation/images/product_details.png)
+
+---
+
+## Key Power BI Features
+
+- Interactive slicers
+- Custom tooltips
+- Drill-through navigation
+- Dynamic page titles
+- Dynamic chart titles
+- Calendar table
+- DAX measures
+- Cross-filtering between visuals
+
+---
+
+## Key DAX Measures
+
+Examples of measures created in the report:
+
+- Total Revenue
+- Total Profit
+- Profit Margin
+- Units Sold
+- Current Stock
+- Stores Selling Product
+- Selected Product
+- Dynamic chart titles
+
+---
+
+## Documentation
+
+Detailed documentation is available in the `documentation` folder:
+
+| File | Description |
+|---|---|
+| `01_data_understanding.md` | Initial data exploration |
+| `02_data_quality.md` | Nulls, duplicates and key checks |
+| `03_business_validation.md` | Business rule validation |
+| `04_data_issues.md` | Data issues found before cleaning |
+| `05_data_cleaning.md` | SQL cleaning process |
+| `06_data_model.md` | Power BI data model |
+| `07_dashboard.md` | Dashboard structure and features |
+
+---
+
+## Lessons Learned
+
+This project helped me practice the full analytics workflow:
+
+- Understanding and validating raw data before visualization
+- Creating reusable SQL views instead of modifying raw tables
+- Building a clean Power BI data model
+- Writing DAX measures for business KPIs
+- Designing interactive dashboards with slicers, tooltips and drill-through
+- Documenting the project process clearly for portfolio purposes
