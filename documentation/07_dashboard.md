@@ -1,8 +1,6 @@
 # Dashboard
 
-```
 The Power BI dashboard consists of two interactive pages designed to provide both a high-level business overview and detailed product analysis.
-```
 
 ## Executive Summary
 
