@@ -2,12 +2,36 @@
 
 ## Project Overview
 
-This project is an end-to-end sales analysis of Maven Toys, a fictional retail toy store chain.  
-The goal was to clean and validate raw sales, product, store and inventory data, build a reliable data model, and create an interactive Power BI dashboard for business performance analysis.
+This project is an end-to-end sales analysis of Maven Toys, a fictional retail toy store chain. 
+The goal of this project was to clean and validate raw retail data, build a star-schema data model and create an interactive Power BI dashboard for business analysis. 
+
+The project has been built using SQL Server and Power BI.
 
 The final dashboard allows users to analyze revenue, profit, product performance, store performance, inventory levels and trends over time.
 
 ---
+
+## Project Highlights
+
+- End-to-end analytics project
+- SQL data cleaning using Views
+- Star schema data model
+- Interactive Power BI dashboard
+- Drill-through navigation
+- Dynamic DAX measures
+- Complete technical documentation
+
+---
+
+## Dashboard Preview 
+
+### Executive Summary
+
+![Executive Summary](images/executive_summary.png)
+
+### Product Details
+
+![Product Details](images/product_details.png)
 
 ## Business Objectives
 
@@ -33,18 +57,18 @@ The dataset consists of four main tables:
 | Stores | Store names, locations and when they were opened |
 | Inventory | Current stock levels by store and product |
 
-Sales table contains over 800 000 rows.
+The Sales table contains over 800 000 transaction records.
 
 ---
 
 ## Tools Used
 
-- SQL Server Management Studio
 - Microsoft SQL Server
+- SQL Server Management Studio (SSMS)
 - T-SQL
 - Power BI
 - DAX
-- VS Code
+- Git
 - GitHub
 
 ---
@@ -99,6 +123,8 @@ Dimension tables:
 
 All relationships use single-direction filtering.
 
+A dedicated calendar table was created to support time intelligence and date-based analysis.
+
 ---
 
 ## Dashboard Pages
@@ -119,8 +145,6 @@ Main elements:
 - Top 5 Products by Profit
 - Top 5 Stores by Profit
 
-![Executive Summary](../)
-
 ---
 
 ### Product Details
@@ -137,8 +161,6 @@ Main elements:
 - Stores selling the selected product
 - Monthly profit trend
 - Top stores for selected product
-
-![Product Details](documentation/images/product_details.png)
 
 ---
 
@@ -165,7 +187,7 @@ Examples of measures created in the report:
 - Units Sold
 - Current Stock
 - Stores Selling Product
-- Selected Product
+- Dynamic page titles
 - Dynamic chart titles
 
 ---
@@ -181,7 +203,7 @@ Detailed documentation is available in the `documentation` folder:
 | `03_business_validation.md` | Business rule validation |
 | `04_data_issues.md` | Data issues found before cleaning |
 | `05_data_cleaning.md` | SQL cleaning process |
-| `06_data_model.md` | Power BI data model |
+| `06_data_model.md` | Star schema and relationships |
 | `07_dashboard.md` | Dashboard structure and features |
 
 ---
