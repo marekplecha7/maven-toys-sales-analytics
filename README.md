@@ -1,4 +1,4 @@
-# Maven Toys Sales Analysis
+# Maven Toys Sales Analytics
 
 ## Project Overview
 
