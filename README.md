@@ -217,4 +217,4 @@ This project helped me practice the full analytics workflow:
 - Building a clean Power BI data model
 - Writing DAX measures for business KPIs
 - Designing interactive dashboards with slicers, tooltips and drill-through
-- Documenting the project process clearly for portfolio purposes
+- Designing a scalable documentation structure for an end-to-end analytics project.
