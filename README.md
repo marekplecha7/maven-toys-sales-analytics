@@ -205,16 +205,3 @@ Detailed documentation is available in the `documentation` folder:
 | `05_data_cleaning.md` | SQL cleaning process |
 | `06_data_model.md` | Star schema and relationships |
 | `07_dashboard.md` | Dashboard structure and features |
-
----
-
-## Lessons Learned
-
-This project helped me practice the full analytics workflow:
-
-- Understanding and validating raw data before visualization
-- Creating reusable SQL views instead of modifying raw tables
-- Building a clean Power BI data model
-- Writing DAX measures for business KPIs
-- Designing interactive dashboards with slicers, tooltips and drill-through
-- Designing a scalable documentation structure for an end-to-end analytics project.
